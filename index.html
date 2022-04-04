@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="box">
+    <form class="box__search">
+      <input class="box__search-input" type="search" name="search" placeholder="name of city">
+      <button class="box__search-btn" type="button"></button>
+    </form>
+    <div class="box__content">
+      <div class="box__content-left">
+        <div class="box__right-tab-content">
+          <!-- 1 таб -->
+          <div id="tab_now" class="box__right-tab-block box__right-tab-block--1">
+            <div class="box__block-content--top">
+              <span class="box__right-temperature circle-icon">14</span>
+            </div>
+            <div class="box__block-content--middle">
+              <img class="now__weather-icon" src="./img/icons8-cloud-96 1.svg" alt="cloud">
+            </div>
+            <div class="box__block-content--bottom">
+              <p class="box__block-title">Aktobe</p>
+              <button class="box__bottom-btn" type="button">Like</button>
+            </div>
+          </div>
+          <!-- 2 таб -->
+          <div id="tab_details" class="box__right-tab-block box__right-tab-block--2">
+            <p class="box__block-title">Aktobe</p>
+            <ul class="details-list">
+              <li class="details-item">Temperature: <span class="temp circle-icon">14</span></li>
+              <li class="details-item">Feels like: <span class="feels__like circle-icon">10</span></li></li>
+              <li class="details-item">Weather: <span class="weather">Clouds</span></li>
+              <li class="details-item">Sunrise: <span class="sunrise"></span></li>
+              <li class="details-item">Sunset: <span class="sunset"></span></li>
+            </ul>
+          </div>
+          <!-- 3 таб  -->
+          <div id="tab_forecast" class="box__right-tab-block box__right-tab-block--3">
+            <p class="box__block-title">Aktobe</p>
+            <div class="forecast-list">
+              <div class="forecast-item">
+                <div class="forecast-date-box">
+                  <p class="forecast-date">17 May</p>
+                  <p class="forecast-time">12:00</p>
+                </div>
+                <div class="forecast-temperature-box">
+                  <p class="forecast-temperature">Temperature: <span class="circle-icon">13</span></p>
+                  <p class="forecast-weather">Rain</p>
+                </div>
+                <div class="forecast-like-box">
+                  <p class="forecast-feels">Feels like: <span class="circle-icon">10</span></p>
+                  <img class="forecast-weather-icon" src="./img/icons8-rain-96 1.svg" alt="">
+                </div>
+              </div>
+              <div class="forecast-item">
+                <div class="forecast-date-box">
+                  <p class="forecast-date">17 May</p>
+                  <p class="forecast-time">15:00</p>
+                </div>
+                <div class="forecast-temperature-box">
+                  <p class="forecast-temperature">Temperature: <span class="circle-icon">13</span></p>
+                  <p class="forecast-weather">Rain</p>
+                </div>
+                <div class="forecast-like-box">
+                  <p class="forecast-feels">Feels like: <span class="circle-icon">10</span></p>
+                  <img class="forecast-weather-icon" src="./img/icons8-rain-96 1.svg" alt="">
+                </div>
+              </div>
+              <div class="forecast-item">
+                <div class="forecast-date-box">
+                  <p class="forecast-date">17 May</p>
+                  <p class="forecast-time">18:00</p>
+                </div>
+                <div class="forecast-temperature-box">
+                  <p class="forecast-temperature">Temperature: <span class="circle-icon">13</span></p>
+                  <p class="forecast-weather">Rain</p>
+                </div>
+                <div class="forecast-like-box">
+                  <p class="forecast-feels">Feels like: <span class="circle-icon">10</span></p>
+                  <img class="forecast-weather-icon" src="./img/icons8-rain-96 1.svg" alt="">
+                </div>
+              </div>
+              <div class="forecast-item">
+                <div class="forecast-date-box">
+                  <p class="forecast-date">17 May</p>
+                  <p class="forecast-time">21:00</p>
+                </div>
+                <div class="forecast-temperature-box">
+                  <p class="forecast-temperature">Temperature: <span class="circle-icon">13</span></p>
+                  <p class="forecast-weather">Rain</p>
+                </div>
+                <div class="forecast-like-box">
+                  <p class="forecast-feels">Feels like: <span class="circle-icon">10</span></p>
+                  <img class="forecast-weather-icon" src="./img/icons8-rain-96 1.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box__right-tabs">
+          <a href="#tab_now" class="box__right-tab">Now</a>
+          <a href="#tab_details" class="box__right-tab">Details</a>
+          <a href="#tab_forecast" class="box__right-tab">Forecast</a>
+        </div>
+      </div>
+      <div class="box__content-right">
+        <div class="box__right-title">Added Locations:</div>
+        <ul class="box__right-list">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <template id="add__location-item">
+    <li class="box__right-item"><p class="city__name"></p><button class="close__btn">x</button></li>
+  </template>
+</body>
+<script type="module" src="./js/main.js"></script>
+</html>
