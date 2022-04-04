@@ -13,14 +13,14 @@ function getDate() {
 
 export const URL = {
     MAIN: function(value) {
-        const serverUrl = 'http://api.openweathermap.org/data/2.5/weather';
+        const serverUrl = 'https://api.openweathermap.org/data/2.5/weather';
         const cityName = value;
         const apiKey = '5defb8581efa3988a86dfe88e4c85e8e';
         const url = `${serverUrl}?q=${cityName}&appid=${apiKey}&units=metric`;
         return url;
     },
     FORECAST: function(value) {
-        const serverUrl = 'http://api.openweathermap.org/data/2.5/forecast';
+        const serverUrl = 'https://api.openweathermap.org/data/2.5/forecast';
         const cityName = value;
         const timestampsNum = 4;
         const apiKey = '5defb8581efa3988a86dfe88e4c85e8e';
@@ -34,7 +34,7 @@ export const RESPONSE = {
         try {
         let response = await fetch(URL.MAIN(value))
         let city = await response.json()    
-        const iconUrl = `http://openweathermap.org/img/wn/${city.weather[0].icon}@4x.png`;
+        const iconUrl = `https://openweathermap.org/img/wn/${city.weather[0].icon}@4x.png`;
         let data = {
              temperature: city.main.temp,
             name: city.name,
